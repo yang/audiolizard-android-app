@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AudioLizard</string>
+    <string name="title_activity_enqueue">AudioLizard</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+</resources>
