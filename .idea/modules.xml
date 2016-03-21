@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/AudioLizard.iml" filepath="$PROJECT_DIR$/AudioLizard.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/audiolizard-android-app.iml" filepath="$PROJECT_DIR$/audiolizard-android-app.iml" />
     </modules>
   </component>
 </project>
-
