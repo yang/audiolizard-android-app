@@ -109,6 +109,7 @@ public class EnqueueActivity extends ActionBarActivity {
             String url = intent.getStringExtra(Intent.EXTRA_TEXT);
             List<NameValuePair> params = new LinkedList<>();
             params.add(new BasicNameValuePair("url", url));
+            params.add(new BasicNameValuePair("key", getString(R.string.audiolizard_secret)));
             String paramString = URLEncodedUtils.format(params, "utf-8");
             String finalUrl = "https://yz.mit.edu/audiolizard/api/v1/enqueue?" + paramString;
 

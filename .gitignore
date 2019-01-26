@@ -5,3 +5,4 @@
 /.idea/caches
 .DS_Store
 /build
+secrets.xml
