@@ -43,6 +43,12 @@ public class EnqueueActivity extends ActionBarActivity {
             HttpResponse response;
             Response resp = new Response();
             try {
+                // Apache libs are deprecated, but we continue to force using legacy lib.
+                // These commented lines show what new code should look like, according to https://stackoverflow.com/questions/32153318/httpclient-wont-import-in-android-studio
+//                URL urlObj = new URL(uri[0]);
+//                HttpURLConnection urlConnection = (HttpURLConnection) urlObj.openConnection();
+//                InputStream is = urlConnection.getInputStream();
+
                 response = httpclient.execute(new HttpGet(uri[0]));
                 StatusLine statusLine = response.getStatusLine();
                 if (statusLine.getStatusCode() == HttpStatus.SC_OK) {
@@ -104,7 +110,7 @@ public class EnqueueActivity extends ActionBarActivity {
             List<NameValuePair> params = new LinkedList<>();
             params.add(new BasicNameValuePair("url", url));
             String paramString = URLEncodedUtils.format(params, "utf-8");
-            String finalUrl = "http://yz.mit.edu/audiolizard/api/v1/enqueue?" + paramString;
+            String finalUrl = "https://yz.mit.edu/audiolizard/api/v1/enqueue?" + paramString;
 
 
             new RequestTask().execute(finalUrl);

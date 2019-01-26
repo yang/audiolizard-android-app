@@ -1,16 +1,22 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 21
+    compileSdkVersion 28
+    // https://stackoverflow.com/questions/31433687/android-gradle-apache-httpclient-does-not-exist
+    useLibrary  'org.apache.http.legacy'
 
     defaultConfig {
         applicationId "com.audiolizard.audiolizard"
         minSdkVersion 17
-        targetSdkVersion 21
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
     }
     buildTypes {
+        // https://stackoverflow.com/questions/42897739/java-io-ioexception-no-original-dex-files-found-for-dex-location
+        debug {
+            minifyEnabled false
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
